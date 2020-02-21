@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OLX Pakistan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+        .droplist {
+            display: none;
+        }
+
+        .drop:hover .droplist {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><b>OLX</b></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Location">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="login"><a href="#">Login</a></li>
+                    <li id="comment" style="display: none"><a href="#"><i class="far fa-comment-alt"></i></a></li>
+                    <li id="bell" style="display: none"><a href="#"><i class="far fa-bell"></i></a></li>
+                    <li class="dropdown" id="moreOption" style="display: none">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Pic &nbsp;<i class="fas fa-chevron-down"></i> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./My Aid.html"><i class="fas fa-audio-description"></i> &nbsp;&nbsp;My Aid</a>
+                            </li>
+                            <li><a href="#"><i class="fas fa-wallet"></i> &nbsp;&nbsp;My Order &
+                                    Billing</a></li>
+                            <li><a href="#"><i class="fas fa-network-wired"></i> &nbsp;&nbsp;My Network</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="far fa-question-circle"></i> &nbsp;&nbsp;Help</a></li>
+                            <li><a href="./Setting.html"><i class="fas fa-sliders-h"></i> &nbsp;&nbsp;Setting</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li onclick="logout()"><a href="#"><i class="fas fa-sign-out-alt"></i>
+                                    &nbsp;&nbsp;Logout</a></li>
+                        </ul>
+                    </li>
+                    <li id="saleBtn"><a href="./sale.html"><i class="fas fa-ad"></i> &nbsp;Sale</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+    <div class="apna-container">
+        <h3><b>My Aids</b></h3>
+        <div id="MY-POST">
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/styling.js"></script>
+
+    <script>
+        var userId = localStorage.getItem("uid")
+        firebase.database().ref("users/" + userId).once('value', function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                childSnapshot.forEach(function (anotherChildSnapshot) {
+                    anotherChildSnapshot.forEach(function (anAnotherChildSnapshot) {
+                        anAnotherChildSnapshot.forEach(function (AgainChildSnapshot) {
+                            var childKey = AgainChildSnapshot.key;
+                            var childData = AgainChildSnapshot.val();
+
+                            console.log(childData)
+
+                            // ...
+                            var mainDiv = document.getElementById("MY-POST");
+                            var underDiv = document.createElement("div");
+                            underDiv.setAttribute("class", "dynamicPost");
+                            var img = document.createElement("img");
+                            img.src = "http://localhost:8000/images/car%20img.jpg";
+                            img.setAttribute("height", "170px");
+                            img.setAttribute("width", "100%")
+                            var detailDiv = document.createElement("div");
+                            detailDiv.setAttribute("class", "detail");
+                            var detailUnderDiv = document.createElement("div");
+                            var h3 = document.createElement("h3");
+                            var firstb = document.createElement("b");
+                            firstb.innerText = "Rs" + " " + childData.price;
+                            var secondb = document.createElement("b");
+                            secondb.innerText = childData.title + "\n";
+                            var firstp = document.createElement("p");
+                            var maxLength = 20;
+                            var trimmedString = childData.description.substr(0, maxLength);
+                            firstp.innerText = trimmedString + "..." + "\n";
+                            var secondp = document.createElement("p");
+                            secondp.innerText = childData.state + "\n";
+                            var iconDiv = document.createElement("div");
+                            var a = document.createElement("a");
+                            a.setAttribute("href", "#")
+                            a.setAttribute("id", "heart")
+                            var i = document.createElement("i");
+                            i.setAttribute("class", "fas fa-heart");
+                            mainDiv.appendChild(underDiv);
+                            underDiv.appendChild(img);
+                            underDiv.appendChild(detailDiv);
+                            detailDiv.appendChild(detailUnderDiv);
+                            detailUnderDiv.appendChild(h3);
+                            h3.appendChild(firstb);
+                            detailUnderDiv.appendChild(secondb);
+                            detailUnderDiv.appendChild(firstp);
+                            detailUnderDiv.appendChild(secondp);
+                            detailDiv.appendChild(iconDiv);
+                            iconDiv.appendChild(a);
+                            a.appendChild(i)
+
+                        })
+                    });
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

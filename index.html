@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OLX - Buy and Sell for free anywhere in Pakistan with OLX online classified</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="./images/icon.png">
+
+  <style>
+    .droplist {
+      display: none;
+    }
+
+    .drop:hover .droplist {
+      display: block;
+    }
+
+    @font-face {
+      font-family: "personal";
+      src: url(../font/ChelaOne-Regular.ttf)
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><b style="font-family: personal; font-size: 32px;">OLX</b></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Location">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search...">
+          </div>
+          <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="login"><a href="#">Login</a></li>
+          <li id="comment" style="display: none"><a href="#"><i class="far fa-comment-alt"></i></a></li>
+          <li id="bell" style="display: none"><a href="#"><i class="far fa-bell"></i></a></li>
+          <li class="dropdown" id="moreOption" style="display: none">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Pic &nbsp;<i class="fas fa-chevron-down"></i> </a>
+            <ul class="dropdown-menu">
+              <li><a href="./pages/My Aid.html"><i class="fas fa-audio-description"></i> &nbsp;&nbsp;My Aid</a></li>
+              <li><a href="#"><i class="fas fa-wallet"></i> &nbsp;&nbsp;My Order & Billing</a></li>
+              <li><a href="#"><i class="fas fa-network-wired"></i> &nbsp;&nbsp;My Network</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#"><i class="far fa-question-circle"></i> &nbsp;&nbsp;Help</a></li>
+              <li><a href="./pages/Setting.html"><i class="fas fa-sliders-h"></i> &nbsp;&nbsp;Setting</a></li>
+              <li role="separator" class="divider"></li>
+              <li onclick="logout()"><a href="#"><i class="fas fa-sign-out-alt"></i> &nbsp;&nbsp;Logout</a></li>
+            </ul>
+          </li>
+          <li id="saleBtn"><a href="./pages/sale.html"><i class="fas fa-ad"></i> &nbsp;Sale</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <div class="banner">
+
+  </div>
+  <br><br>
+  <div class="apna-container">
+    <h3><b>Fresh Recommendations</b></h3>
+
+    <div class="AllPosts">
+      <div class="post">
+        <img src="images/car img.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 1,325,000</b></h3>
+            <b>2016 - 34000 km</b><br>
+            Suzuki Swift DLX 1.3 2016<br><br>
+            Gulshan-e-iqbal, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <img src="images/mobile.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 44,000</b></h3>
+            <b>Iphone 7 or 7plus</b><br>
+            128gb PTA Approved mobile hub<br><br>
+            Defence, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <img src="images/lcd.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 1,325,000</b></h3>
+            <b>2016 - 34000 km</b><br>
+            Suzuki Swift DLX 1.3 2016<br><br>
+            Gulshan-e-iqbal, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <img src="images/laptop.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 88,000</b></h3>
+            <b>2016 - 34000 km</b><br>
+            Suzuki Swift DLX 1.3 2016<br><br>
+            Gulshan-e-iqbal, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="AllPosts">
+      <div class="post">
+        <img src="images/car img.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 1,325,000</b></h3>
+            <b>2016 - 34000 km</b><br>
+            Suzuki Swift DLX 1.3 2016<br><br>
+            Gulshan-e-iqbal, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <img src="images/mobile.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 1,325,000</b></h3>
+            <b>2016 - 34000 km</b><br>
+            Suzuki Swift DLX 1.3 2016<br><br>
+            Gulshan-e-iqbal, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <img src="images/lcd.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 1,325,000</b></h3>
+            <b>2016 - 34000 km</b><br>
+            Suzuki Swift DLX 1.3 2016<br><br>
+            Gulshan-e-iqbal, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <img src="images/laptop.jpg" width="100%" height="170px">
+        <div class="detail">
+          <div>
+            <h3><b>Rs 1,325,000</b></h3>
+            <b>2016 - 34000 km</b><br>
+            Suzuki Swift DLX 1.3 2016<br><br>
+            Gulshan-e-iqbal, Karachi
+          </div>
+
+          <div>
+            <a href="#" id="heart"><i class="fas fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h3><b>Users Posts</b></h3>
+    <div id="Allposts">
+
+    </div>
+    <br><br><br>
+
+    <button class="btn btn-success" style="margin: 0 auto">Load More</button>
+
+  </div>
+  <br><br><br><br><br><br>
+
+  <div class="container-fluid well">
+    <div class="apna-container">
+      <div class="links">
+        <div>
+          <h5><b>POPULAR CATEGORIES</b></h5>
+          <br>
+          <a href="#">Cars</a><br>
+          <a href="#">Flat for rent</a><br>
+          <a href="#">Jobs</a><br>
+          <a href="#">Mobile Phones</a>
+        </div>
+        <div>
+          <h5><b>POPULAR SEARCHES</b></h5>
+          <br>
+          <a href="#">Bikes</a><br>
+          <a href="#">Watches</a><br>
+          <a href="#">Books</a><br>
+          <a href="#">Dogs</a>
+        </div>
+        <div>
+          <h5><b>ABOUT US</b></h5>
+          <br>
+          <a href="#">About OLS Group</a><br>
+          <a href="#">OLX Blog</a><br>
+          <a href="#">Contact Us</a><br>
+          <a href="#">OLX For Bussinesses</a>
+        </div>
+        <div>
+          <h5><b>OLX</b></h5>
+          <br>
+          <a href="#">help</a><br>
+          <a href="#">Sitemap</a><br>
+          <a href="#">Legal & Privacy Information</a><br><br>
+        </div>
+        <div>
+          <h5><b>FOLLOW US</b></h5>
+          <br>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-google-plus-square"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-whatsapp-square"></i>
+          <br><br>
+          <img src="images/playstore.png">
+          <img src="images/appstore.png">
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid footer">
+    <div class="apna-container">
+      <b>Other Countries</b> &nbsp;&nbsp;
+      <a href="#">Kenya</a> - <a href="#">Ghana</a> - <a href="#">Nigeria</a> - <a href="#">India</a> - <a
+        href="#">South Africa</a>
+      <b style="float: right;">Free Classifieds in Pakistan . © 2006-2019 OLX</b>
+    </div>
+  </div>
+
+
+  <div id="loginform">
+    <div id="content1">
+      <i style="float: right; font-size: 22px;" class="fas fa-times-circle" id="close"></i>
+      <img src="images/admin.png" width="90px" />
+      <br><br>
+      <h4>Save All You Favourite items in <br>one place</h4>
+    </div><br><br><br>
+    <div id="content2">
+      <button onclick="fblogin()"><i class="fab fa-facebook"></i>&nbsp;&nbsp;Continue With Facebook</button><br>
+      <button onclick="GoogleLogin()"><i class="fab fa-google-plus"></i>&nbsp;&nbsp;Continue With Google</button><br>
+      <button onclick="emaillogin()">Continue With Email</button><br>
+      <button>Continue With Phone</button>
+    </div><br>
+    <div id="content3">
+      We won't share your personal details with anyone<br><br>
+      If you continue, you are accepting <a href="">OLX Terms and Conditions and Privacy Policy</a>
+    </div>
+    <div id="content4" style="display: none">
+      <i style="float: right; font-size: 22px;" class="fas fa-times-circle" id="close"></i>
+      <img id="img1" src="images/OLX_New_Logo.png" width="100px">&nbsp;|--------|&nbsp;<img id="img2" width="80px">
+      <br>
+      <div id="firstStep">
+        <h3 align="center"><b>Enter Your Email</b></h3><br><br>
+        <input placeholder="Email" id="email"><br><br><br><br><br>
+        <button onclick="Next()">Next</button><br><br><br>
+        We won't reveal your email to anyone else nor use it to send you spam
+      </div>
+      <div id="secondStep" style="display: none;">
+        <h3 align="center"><b>Enter Your Password</b></h3><br><br>
+        <input placeholder="Password" id="Password"><br><br><br><br><br>
+        <button onclick="Next()">Log in</button><br><br>
+        <a href="#">Forget Your Password</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/styling.js"></script>
+</body>
+
+</html>

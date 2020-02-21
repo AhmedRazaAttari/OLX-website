@@ -1,0 +1,144 @@
+.navbar-default{
+    background: white;
+}
+
+.banner
+{
+    height: 250px;
+    width: 100%;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.apna-container
+{
+    margin: 0 auto;
+    width: 1200px;
+}
+.AllPosts
+{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+#Allposts{
+    display: block;
+}
+.post
+{
+    text-align: left;
+    height: 320px;
+    width: 280px;
+    border: 1px solid rgb(211, 203, 203);
+}
+.dynamicPost{
+    display: inline-block;
+    /* margin-left: 5px; */
+    margin-right: 20px;
+    text-align: left;
+    height: 320px;
+    width: 280px;
+    border: 1px solid rgb(211, 203, 203);
+}
+.detail
+{
+    margin-top: -10px;
+    padding: 15px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.detail i {
+    font-size: 22px;
+}
+#heart{
+    color: black;
+}
+.links
+{
+    text-align: left;
+    bottom: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.links a
+{
+    color: grey;
+    text-decoration: none;
+}
+.links a:hover{
+    color: black;
+}
+
+.links i 
+{
+    font-size: 24px;
+    margin: 5px;
+}
+
+.footer
+{
+    height: 50px;
+    margin-top: -15px;
+    background: rgb(39, 37, 37);
+    color: white;
+    line-height: 45px;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#loginform{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 380px;
+    position: fixed;
+    background: white;
+    top: 23%;
+    left: 35%;
+    display: none;
+    text-align: center;
+    padding: 20px;
+    height: 570px;
+}
+#loginform button{
+    width: 320px;
+    height: 45px;
+    margin-top: 5px;
+    background: none;
+    border: 2px solid blue;
+    font-size: 18px;
+    color: blue;
+}
+#content4{
+    margin-top: -55px;
+}
+
+#content4 input
+{
+    text-indent: 10px;
+    height: 40px;
+    width: 320px;
+    border: 1px solid rgb(187, 179, 179);
+    font-size: 17px;
+    outline: none;
+}
+#content4 input:focus{
+    box-shadow: inset 0px 0px 4px 0px #000000;
+}
+
+#loginform button:hover{
+    background: skyblue;
+}

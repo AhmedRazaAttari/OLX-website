@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OLX Pakistan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sale.css" />
+    <link rel="icon" href="../images/icon.png">
+    <style>
+        @font-face {
+            font-family: "personal";
+            src: url(../font/ChelaOne-Regular.ttf)
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../pages/sale.html" style="color: black; text-decoration: none"><i
+                class="fas fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
+                style="font-family: personal; font-size: 44px; margin-top: 35px;">OLX</b></a>
+    </header>
+
+    <h2 align="center"><b>Post Your AD</b></h2>
+
+    <div class="first-wrapper">
+        <div class="saleBox" style="font-family: arial">
+            <div class="header" style="border-bottom: 1px solid grey; height: auto; padding-bottom: 15px;">
+                <h3><b>&nbsp;&nbsp;&nbsp;Selected Category</b></h3><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b id="MainCategory"></b> / <b id="dropCategory"></b>
+            </div>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>INCLUDE SOME DETAILS</b></h3>
+                <br />
+                <div id="MakeBrand">
+                    <b>Make</b> *<br>
+                    <select id="Make">
+                        <option value="select"></option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Daewoo">Daewoo</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hyundia">Hyundia</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="United">United</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Suzuki">Suzuki</option>
+                    </select>
+                    <br />
+                    <br />
+                </div>
+                <div id="yearDiv">
+                    <b>Year</b> *<br>
+                    <input placeholder="" id="Year" class="inputText"><br>
+                    <p style="float: left; ">Year is mandatory. Please Complete the required field</p>
+                    <br />
+                    <br />
+                </div>
+                <div id="drivenDiv">
+                    <b>KMs driven</b> *<br>
+                    <input placeholder="" id="KMs-driven" class="inputText"><br>
+                    <p style="float: left; ">KMs driven is mandatory. Please complete the required field.</p>
+                    <br />
+                    <br />
+                </div>
+                <div id="fuel">
+                    Fuel *<br>
+                    <label>
+                        <input name="fuel" type="radio" value="CNG">
+                        <span>CNG</span>
+                    </label>
+                    <label>
+                        <input name="fuel" type="radio" value="Diesel">
+                        <span>Diesel</span>
+                    </label>
+                    <label>
+                        <input name="fuel" type="radio" value="Hybrid">
+                        <span>Hybrid</span>
+                    </label>
+                    <label>
+                        <input name="fuel" type="radio" value="LPG">
+                        <span>LPG</span>
+                    </label>
+                    <label>
+                        <input name="fuel" type="radio" value="Petrol">
+                        <span>Petrol</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="condition">
+                    Condition *<br>
+                    <label>
+                        <input name="Condition" type="radio" value="New">
+                        <span>New</span>
+                    </label>
+                    <label>
+                        <input name="Condition" type="radio" value="Used">
+                        <span>Used</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="transmission">
+                    Transmission *<br>
+                    <label>
+                        <input name="transmission" type="radio" value="Automatic">
+                        <span>Automatic</span>
+                    </label>
+                    <label>
+                        <input name="transmission" type="radio" value="Manual">
+                        <span>Manual</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="Registered">
+                    Registered *<br>
+                    <label>
+                        <input name="Registered" type="radio" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label>
+                        <input name="Registered" type="radio" value="no">
+                        <span>No</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="DownPayment">
+                    <b>Down Payment</b> *<br>
+                    <input placeholder="" id="Payment" class="inputText"><br>
+                    <p style="float: left; ">Down Payment is mandatory. Please Complete the required field</p>
+                    <br />
+                    <br />
+                </div>
+                <div id="Installment">
+                    <b>Monthly Installment</b> *<br>
+                    <input placeholder="" id="Installment" class="inputText"><br>
+                    <p style="float: left; ">Monthly Installment is mandatory. Please Complete the required field</p>
+                    <br />
+                    <br />
+                </div>
+                <div id="InstallmentPlan">
+                    <b>Installment Plan</b> *<br>
+                    <select id="Plan">
+                        <option value="select"></option>
+                        <option value="Flexible">Flexible</option>
+                        <option value="1 year">1 year</option>
+                        <option value="2 year">2 year</option>
+                        <option value="3 year">3 year</option>
+                        <option value="4 year">4 year</option>
+                        <option value="5 year">5 year</option>
+                        <option value="6 year">6 year</option>
+                        <option value="7 year">7 year</option>
+                    </select>
+                    <br />
+                    <br />
+                </div>
+                <div id="FinancerType">
+                    Financer Type *<br>
+                    <label>
+                        <input name="FinancerType" type="radio" value="Bank">
+                        <span>Bank</span>
+                    </label>
+                    <label>
+                        <input name="FinancerType" type="radio" value="Non Banking Company">
+                        <span>Non Banking Company</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="TransactionType">
+                    Transaction Type *<br>
+                    <label>
+                        <input name="TransactionType" type="radio" value="Financing">
+                        <span>Financing</span>
+                    </label>
+                    <label>
+                        <input name="TransactionType" type="radio" value="Leasing">
+                        <span>Leasing</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="RegisterIn">
+                    <b>Register In</b> *<br>
+                    <select id="Register">
+                        <option value="select"></option>
+                        <option value="Abbottabad">Abbottabad</option>
+                        <option value="Attock">Attock</option>
+                        <option value="Badin">Badin</option>
+                        <option value="Bahawalpur">Bahawalpur</option>
+                        <option value="Charsadda">Charsadda</option>
+                        <option value="Chitral">Chitral</option>
+                        <option value="Quetta">Quetta</option>
+                        <option value="Karachi">Karachi</option>
+                        <option value="Khairpur">Khairpur</option>
+                        <option value="Multan">Multan</option>
+                        <option value="Mardan">Mardan</option>
+                    </select>
+                    <br />
+                    <br />
+                </div>
+                <div id="type">
+                    Type *<br>
+                    <label>
+                        <input name="type" type="radio" value="Car Parts">
+                        <span>Car Parts</span>
+                    </label>
+                    <label>
+                        <input name="type" type="radio" value="Other Parts">
+                        <span>Other Parts</span>
+                    </label>
+                    <br />
+                </div>
+                <br />
+                <b>Ad Title</b> *<br>
+                <input placeholder="" id="title" class="inputText"><br>
+                <p style="float: left; ">Mention the key features of your item (e.g. brand, model,<br> age, type)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 / 70</p><br>
+                <br />
+                <b>Description</b> *<br>
+                <textarea cols="40" rows="5" id="description"></textarea><br>
+                <p style="float: left;">Include condition, features and reason for selling</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    0 / <b id="desWordLength"></b></p><br>
+            </div>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>SET A PRICE</b></h3><br>
+                <b>Price *</b><br>
+                <input placeholder="Rs" type="number" id="price" class="inputText"><br><br>
+            </div>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>UPLOAD UP TO 12 PHOTOS</b></h3><br>
+                <input class="imgfile" type="file" id="firstImg"><input class="imgfile" type="file"
+                    id="secondImg"><input class="imgfile" type="file" id="thirdImg"><input class="imgfile" type="file"
+                    id="forthImg"><input class="imgfile" type="file" id="fifthImg"><input class="imgfile" type="file"
+                    id="sixImg"><input class="imgfile" type="file" id="sevenImg"><input class="imgfile" type="file"
+                    id="eightImg">
+            </div>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>CONFIRM YOUR LOCATION</b></h3><br>
+                <a href="#">Manual Selection</a>&nbsp;&nbsp;&nbsp;<a href="#">Current Location</a><br><br>
+                <b>State</b> *<br>
+                <select id="state">
+                    <option value="select"></option>
+                    <option value="Azad Kashmir">Azad Kashmir</option>
+                    <option value="Balochistan">Balochistan</option>
+                    <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+                    <option value="Sindh">Sindh</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Northern Areas">Northern Areas</option>
+                    <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                </select><br><br>
+
+                <br><br>
+
+            </div><br>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>REVIEW YOUR DETAILS</b></h3><br>
+                <img id="Profile" width="80px;" style="float: left; margin-right: 20px;">
+                <b>Name</b>*<br>
+                <input placeholder="" id="UserName" class="inputText"><br><br><br>
+
+            </div><br>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <button onclick="SubmitAd()">. Post Now .</button>
+            </div><br>
+        </div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="../js/categories/vehicle.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/styling.js"></script>
+</body>
+
+</html>

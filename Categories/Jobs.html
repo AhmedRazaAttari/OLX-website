@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OLX Pakistan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sale.css" />
+    <link rel="icon" href="../images/icon.png">
+    <style>
+        @font-face {
+            font-family: "personal";
+            src: url(../font/ChelaOne-Regular.ttf)
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../pages/sale.html" style="color: black; text-decoration: none"><i
+                class="fas fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b
+                style="font-family: personal; font-size: 44px; margin-top: 35px;">OLX</b></a>
+    </header>
+
+    <h2 align="center"><b>Post Your AD</b></h2>
+
+    <div class="first-wrapper">
+        <div class="saleBox" style="font-family: arial">
+            <div class="header" style="border-bottom: 1px solid grey; height: auto; padding-bottom: 15px;">
+                <h3><b>&nbsp;&nbsp;&nbsp;Selected Category</b></h3><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b id="MainCategory"></b> / <b id="dropCategory"></b>
+            </div>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>INCLUDE SOME DETAILS</b></h3>
+
+                <div id="AdtypeDiv">
+                    Ad type *<br>
+                    <label>
+                        <input name="Adtype" type="radio" value="CVs & Resumes">
+                        <span>CVs & Resumes</span>
+                    </label>
+                    <label>
+                        <input name="Adtype" type="radio" value="Job Offers">
+                        <span>Job Offers</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="PositiontypeDiv">
+                    Position type *<br>
+                    <label>
+                        <input name="Positiontype" type="radio" value="Contract">
+                        <span>Contract</span>
+                    </label>
+                    <label>
+                        <input name="Positiontype" type="radio" value="Full time">
+                        <span>Full time</span>
+                    </label>
+                    <label>
+                        <input name="Positiontype" type="radio" value="Part time">
+                        <span>Part time</span>
+                    </label>
+                    <label>
+                        <input name="Positiontype" type="radio" value="temporary">
+                        <span>temporary</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <div id="SalaryDiv">
+                    Salary period *<br>
+                    <label>
+                        <input name="Salaryperiod" type="radio" value="Hourly">
+                        <span>Hourly</span>
+                    </label>
+                    <label>
+                        <input name="Salaryperiod" type="radio" value="Monthly">
+                        <span>Monthly</span>
+                    </label>
+                    <label>
+                        <input name="Salaryperiod" type="radio" value="Weekly">
+                        <span>Weekly</span>
+                    </label>
+                    <label>
+                        <input name="Salaryperiod" type="radio" value="Yearly">
+                        <span>Yearly</span>
+                    </label>
+                    <br />
+                    <br />
+                </div>
+                <br />
+                <div id="SalaryfromDiv">
+                    <b>Salary from</b><br>
+                    <input placeholder="" id="Salaryfrom" class="inputText"><br>
+                    <br />
+                    <br />
+                </div>
+                <div id="SalarytoDiv">
+                    <b>Salary to</b><br>
+                    <input placeholder="" id="Salaryto" class="inputText"><br>
+                    <br />
+                    <br />
+                </div>
+                <br />
+                <b>Ad Title</b> *<br>
+                <input placeholder="" id="title" class="inputText"><br>
+                <p style="float: left; ">Mention the key features of your item (e.g. brand, model,<br> age, type)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 / 70</p><br><br>
+                <b>Description</b> *<br>
+                <textarea cols="40" rows="5" id="description"></textarea><br>
+                <p style="float: left;">Include condition, features and reason for selling</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    0 / <b id="desWordLength"></b></p><br>
+            </div>
+            <div style="display: none ;padding-left: 35px; padding-top: 20px;">
+                <hr>
+                <h3><b>SET A PRICE</b></h3><br>
+                <b>Price *</b><br>
+                <input placeholder="Rs" type="number" id="price" class="inputText"><br><br>
+            </div>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>UPLOAD UP TO 12 PHOTOS</b></h3><br>
+                <input class="imgfile" type="file" id="firstImg"><input class="imgfile" type="file"
+                    id="secondImg"><input class="imgfile" type="file" id="thirdImg"><input class="imgfile" type="file"
+                    id="forthImg"><input class="imgfile" type="file" id="fifthImg"><input class="imgfile" type="file"
+                    id="sixImg"><input class="imgfile" type="file" id="sevenImg"><input class="imgfile" type="file"
+                    id="eightImg">
+            </div>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>CONFIRM YOUR LOCATION</b></h3><br>
+                <a href="#">Manual Selection</a>&nbsp;&nbsp;&nbsp;<a href="#">Current Location</a><br><br>
+                <b>State</b> *<br>
+                <select id="state">
+                    <option value="select"></option>
+                    <option value="Azad Kashmir">Azad Kashmir</option>
+                    <option value="Balochistan">Balochistan</option>
+                    <option value="Islamabad Capital Territory">Islamabad Capital Territory</option>
+                    <option value="Sindh">Sindh</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Northern Areas">Northern Areas</option>
+                    <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                </select><br><br>
+
+                <br><br>
+
+            </div><br>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <h3><b>REVIEW YOUR DETAILS</b></h3><br>
+                <img id="Profile" width="80px;" style="float: left; margin-right: 20px;">
+                <b>Name</b>*<br>
+                <input placeholder="" id="UserName" class="inputText"><br><br><br>
+
+            </div><br>
+            <hr>
+            <div style="padding-left: 35px; padding-top: 20px;">
+                <button onclick="SubmitAd()">. Post Now .</button>
+            </div><br>
+        </div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="../js/categories/Jobs.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/styling.js"></script>
+</body>
+
+</html>

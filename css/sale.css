@@ -1,0 +1,201 @@
+.navbar-default{
+    padding: 20px;
+}
+header{
+    height: 70px;
+    background: rgb(236, 231, 231);
+    /* padding: 18px; */
+    padding-left: 100px;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+.first-wrapper{
+    width: 850px;
+    margin: 0 auto;
+}
+.saleBox{
+    width: 100%;
+    min-height: 900px;
+    max-height: auto;
+    border: 1px solid rgb(192, 181, 181);
+}
+.saleBox .header{
+    height: 55px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.saleBox p{
+    font-size: 12px;
+    margin-top: 5px;
+    color: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+hr{
+    width: 100%;
+    border: 1px solid rgb(224, 218, 218);
+}
+.saleBox button{
+    height: 40px;
+    min-width: 60px;
+    max-width: auto;
+    background: none;
+    border: 1px solid black;
+    font-size: 16px;
+}
+.saleBox button:hover{
+    background: rgb(226, 230, 231);
+    color: grey;
+}
+.saleBox .FirstBtn:focus{
+    border: 2px solid black;
+    background: rgb(226, 230, 231);
+}
+.saleBox .SecondBtn:focus{
+    border: 2px solid black;
+    background: rgb(226, 230, 231);
+}
+.saleBox .inputText{
+    height: 45px;
+    width: 400px;
+    text-indent: 10px;
+    font-size: 17px;
+    font-family: cursive;
+    outline: none;
+    border: 1px solid rgb(66, 63, 63);
+}
+.saleBox .inputText:focus{
+    border: 3px solid purple;
+}
+label{
+    position: relative;
+    cursor: pointer;
+    font-weight: lighter
+}
+label input{
+    display: none;
+}
+label span{
+    position: relative;
+    display: inline-block;
+    padding: 7px;
+    min-width: 80px;
+    height: 35px;
+    max-width: auto;
+    border: 1px solid black;
+    font-size: 14px;
+    text-align: center;
+}
+label input:checked ~ span {
+    border: 1px solid purple;
+    color: purple;
+    font-weight: bold;
+    background: rgb(170, 210, 226);
+}
+.saleBox textarea{
+    padding-left: 10px;  
+    font-size: 17px;
+    resize: none;
+    width: 400px;
+    padding-right: 80px;
+    outline: none;
+}
+.saleBox textarea:focus{
+    border: 3px solid purple;
+}
+.saleBox .imgfile{
+    border: none;
+    outline: none;
+}
+.saleBox .imgfile:focus{
+    border: none;
+    outline: none;
+}
+.saleBox select{
+    height: 45px;
+    width: 400px;
+    font-size: 17px;
+    font-family: cursive;
+    outline: none;
+    border: 1px solid rgb(66, 63, 63);
+}
+
+.saleBox ul{
+    margin-left: -40px;
+}
+.saleBox ul li
+{
+    border: 1px solid rgb(192, 184, 184);
+    padding: 10px;
+    width: 425px;
+    list-style: none;
+    height: 55px;
+    line-height: 35px;
+}
+.saleBox ul li:hover{
+    background: rgb(206, 198, 198);
+}
+.saleBox ul li:hover a{
+    color: black;
+}
+
+.saleBox li a{
+    color: rgb(141, 130, 130);
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    margin-left: 5px;
+}
+.saleBox li a{
+    text-decoration: none;
+}
+.fa-chevron-right{
+    float: right;
+    line-height: 35px;
+}
+.MobileDropdown,.VehicleDropdown,.ProSaleDropdown,.ProRentDropdown,.BikeDropdown,.ServicesDropdown,.JobsDropdown,.BookDropdown,.FashionDropdown{
+    display: none;
+    position: absolute;
+    left: 50%;
+}
+.MobileDropdown{
+    top: 21.9%;
+}
+.VehicleDropdown{
+    top: 28.2%;
+}
+.ProSaleDropdown{
+    top: 34.3%;
+}
+.ProRentDropdown{
+    top: 40.7%;
+}
+.BikeDropdown{
+    top: 46.9%;
+}
+.ServicesDropdown{
+    top: 53.1%;
+}
+.JobsDropdown{
+    top: 59.4%;
+}
+.BookDropdown{
+    top: 65.7%;
+}
+.FashionDropdown{
+    top: 71.8%;
+}
+footer{
+    background: rgb(70, 54, 68);
+    height: 40px;
+    padding: 12px;
+    color: white;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color: white;
+    text-decoration: none;
+}
